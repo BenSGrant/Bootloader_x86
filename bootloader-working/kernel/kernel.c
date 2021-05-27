@@ -1,4 +1,3 @@
-
 void main() {
     /*
      create a pointer to a character and point it to 
