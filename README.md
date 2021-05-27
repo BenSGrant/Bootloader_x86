@@ -1,2 +1,8 @@
 # Bootloader
-To run use qemu on Linux (I used an Ubuntu VM)
+To run, make sure you have qemu installed on a Linux system
+(it can be a VM, I used an Ubuntu VM on top of a Windows host)
+and run the Makefile with a simple
+
+make
+
+command in the terminal
