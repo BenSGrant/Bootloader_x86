@@ -1,6 +1,6 @@
 [bits 16]	 				; 16bit real mode
-[org 0x7c00] 				; set assembler location counter,
-							; mempory address where the BIOS is placing the bootloader
+[org 0x7c00] 					; set assembler location counter,
+						; mempory address where the BIOS is placing the bootloader
 
 ; where to load the kernel to
 KERNEL_OFFSET equ 0x1000
@@ -23,15 +23,15 @@ jmp $
 
 [bits 16]
 load_kernel:
-	mov bx, KERNEL_OFFSET 	; bx -> destination
+	mov bx, KERNEL_OFFSET 			; bx -> destination
 	mov dh, 2			  	; dh -> num sectors
-	mov dl, [BOOT_DRIVE]  	; dl -> disk
+	mov dl, [BOOT_DRIVE]  			; dl -> disk
 	call disk_load
 	ret
 
 [bits 32] ; 32 bit protected mode
 BEGIN_32BIT:
-	call KERNEL_OFFSET 		; give control to the kernel
+	call KERNEL_OFFSET 			; give control to the kernel
 	jmp $			   		; loop in case kernel returns
 	
 ; boot drive variable
