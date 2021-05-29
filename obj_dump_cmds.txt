@@ -6,7 +6,7 @@ This command will compile the .c file into an a.o file
 
 objdump -d a.o > a.txt
 
-This command will disassemble the a.out (a compiled C file) file and put the output into the a.txt file
+This command will disassemble the a.o (a compiled C file) file and put the output into the a.txt file
 
 The C code of a.c:
 
@@ -15,7 +15,7 @@ void main() {
 	int j = 5;
 }
 
-The dissassembled code of a.out:
+The dissassembled code of a.o:
 
 
 a.out:     file format elf64-x86-64
