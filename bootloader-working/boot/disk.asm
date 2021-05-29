@@ -13,11 +13,11 @@ disk_load:
 	; es:bx = buffer pointer is set as input as well
 	
 	int 0x13			; BIOS interrupt
-	jc disk_error		; check carry bit for error
+	jc disk_error			; check carry bit for error
 	
 	pop dx				; get back original number of sectors to read
 	cmp al, dh			; BIOS sets 'al' to the # number of sectors actually read
-						; compare 'al' to 'dh' and if they're not equal to each other, throw an error
+					; compare 'al' to 'dh' and if they're not equal to each other, throw an error
 	jne sectors_error
 	popa
 	ret
