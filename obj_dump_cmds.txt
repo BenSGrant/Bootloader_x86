@@ -1,5 +1,7 @@
 This is for the Linux Terminal
 
+gcc -Wall -g -c a.c
+
 objdump -d a.out > a.txt
 
 This command will disassemble the a.out (a compiled C file) file and put the output into the a.txt file
