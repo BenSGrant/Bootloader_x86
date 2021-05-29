@@ -1,1 +1,12 @@
+This is for the Linux Terminal
 
+objdump -d a.out > a.txt
+
+This command will disassemble the a.out (a compiled C file) file and put the output into the a.txt file
+
+The C code of a.c:
+
+void main() {
+	int i = 2;
+	int j = 5;
+}
