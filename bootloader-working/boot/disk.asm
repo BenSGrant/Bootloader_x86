@@ -3,7 +3,7 @@ disk_load:
 	push dx
 	
 	mov ah, 0x02 		; read mode
-	mov al, dh	 		; read dh number of sectors
+	mov al, dh	 	; read dh number of sectors
 	mov cl, 0x02 		; start from sector 2 because sector 1 is the boot sector
 	
 	mov ch, 0x00		; cylinder 0
