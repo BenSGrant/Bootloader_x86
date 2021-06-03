@@ -5,8 +5,8 @@ void main() {
     */
     char* video_memory = (char*) 0xb8000;
     /*
-        at the address pointed to by the video_memory variable, store
-        the character 'X'
+        at the address (0xb8000) pointed to by the video_memory 
+        variable, store the character 'X'
     */
     *video_memory = 'X';
 }
