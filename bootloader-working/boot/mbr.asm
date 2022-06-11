@@ -1,6 +1,6 @@
 [bits 16]	 				; 16bit real mode
 [org 0x7c00] 					; set assembler location counter,
-						; mempory address where the BIOS is placing the bootloader
+						; memory address where the BIOS is placing the bootloader
 
 ; where to load the kernel to
 KERNEL_OFFSET equ 0x1000
